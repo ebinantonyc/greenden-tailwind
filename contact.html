@@ -14,8 +14,8 @@
     <!-- Navbar-->
     <section class="bg-green-100 p-3 flex item-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">GREENDEN</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuIcon"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-6 h-6 md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
         <ul class="flex gap-5 text-gray-600 hidden md:flex">
@@ -25,8 +25,26 @@
         </ul>
     </section>
 
-    <!-- contact page copied -->
+    <!-- Side navbar -->
+    <section id="sideNav" class="bg-green-100 fixed z-20 top-0 right-0 transition-all duration-1000"
+        style="width: 50%; height: 100vh; right:-50%">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li class="hover:underline hover:text-black ">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="hover:underline hover:text-black">
+                <a href="products.html">Products</a>
+            </li>
+            <li class="hover:underline hover:text-black">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
 
+    <!-- contact page copied -->
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
@@ -56,6 +74,7 @@
         <p>@ 2025 Greenday.com</p>
     </section>
 
+    <script src="./contact.js"></script>
 </body>
 
 </html>

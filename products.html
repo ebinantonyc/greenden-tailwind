@@ -14,8 +14,8 @@
     <!-- Navbar-->
     <section class="bg-green-100 p-3 flex item-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">GREENDEN</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-            class="w-6 h-6 md:hidden">
+        <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
         <ul class="flex gap-5 text-gray-600 hidden md:flex">
@@ -25,54 +25,80 @@
         </ul>
     </section>
 
+    <!-- Side navbar -->
+    <section id="sideNav" class="bg-green-100 fixed z-20 top-0 right-0 transition-all duration-1000"
+        style="width: 50%; height: 100vh; right:-50%">
+        <div class="text-right p-5">
+            <p id="close-nav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li class="hover:underline hover:text-black ">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="hover:underline hover:text-black">
+                <a href="products.html">Products</a>
+            </li>
+            <li class="hover:underline hover:text-black">
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
+
     <!-- Products -->
     <section class="text-center mt-10">
         <h1 class="text-3xl font-bold">Our Products</h1>
-        <input type="text" class="border border-gray m-3 p-2" placeholder="Search for Product..." style="width: 70%;">
+        <input id="search" type="text" class="border border-gray m-3 p-2" placeholder="Search for Product..."
+            style="width: 70%;">
     </section>
 
     <!-- Plants -->
     <section class="p-4 text-center">
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
-                <img src="./images/bestseller_1.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2" alt="bs1">
+                <img src="./images/bestseller_1.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2"
+                    alt="bs1">
                 <h1>Rose Plant</h1>
                 <p>$10</p>
             </div>
             <div>
-                <img src="./images/bestseller_2.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2" alt="bs1">
+                <img src="./images/bestseller_2.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2"
+                    alt="bs1">
                 <h1>Lily Plant</h1>
                 <p>$10</p>
             </div>
             <div>
-                <img src="./images/bestseller_3.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2" alt="bs1">
+                <img src="./images/bestseller_3.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2"
+                    alt="bs1">
                 <h1>Snake Plant</h1>
                 <p>$10</p>
             </div>
             <div>
-                <img src="./images/bestseller_4.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2" alt="bs1">
+                <img src="./images/bestseller_4.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2"
+                    alt="bs1">
                 <h1>Spider Plant</h1>
                 <p>$10</p>
             </div>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
-                <img src="./images/bestseller_5.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2" alt="bs1">
+                <img src="./images/bestseller_5.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2"
+                    alt="bs1">
                 <h1>Delicosa Plant</h1>
                 <p>$10</p>
             </div>
             <div>
-                <img src="./images/bestseller_6.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2" alt="bs1">
+                <img src="./images/bestseller_6.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2"
+                    alt="bs1">
                 <h1>Yellow mums Plant</h1>
                 <p>$10</p>
             </div>
             <div>
-                <img src="./images/bestseller_7.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2" alt="bs1">
+                <img src="./images/bestseller_7.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2"
+                    alt="bs1">
                 <h1>Green Leafy Plant</h1>
                 <p>$10</p>
             </div>
             <div>
-                <img src="./images/bestseller_8.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2" alt="bs1">
+                <img src="./images/bestseller_8.jpg" class="inline hover:shadow-xl transform hover: -translate-y-2"
+                    alt="bs1">
                 <h1>Orchids Plant</h1>
                 <p>$10</p>
             </div>
@@ -86,6 +112,7 @@
         <p>@ 2025 Greenday.com</p>
     </section>
 
+    <script src="./products.js"></script>
 </body>
 
 </html>
